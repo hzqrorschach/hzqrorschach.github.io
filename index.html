@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>千秋岁</title>
+  <embed src="hlr.mp3" hidden="true" autostart="true" loop="true">
+  <style>
+  
+	body{
+	background:url(l.jpg);
+	}
+	
+
+
+   p{
+	font-size:35px;
+	color:#ffffff;
+	font-family:华文行楷;
+	margin:0 auto;
+	width:300px;
+	}
+
+	#1{
+        margin:0 auto;
+	}
+
+	
+  </style>
+ 
+ </head>
+ <body>
+ <div id="1">
+ 
+ <p id="qian"></p>
+ 
+  </div>
+  <script>
+   var a="惜春更把残红折。zr雨轻风色暴，zr梅子青时节。zr永丰柳，zr无人尽日飞花雪。zr莫把幺弦拨，zr怨极弦能说。zr天不老，zr情难绝。zr心似双丝网，zr中有千千结。";
+
+   var qqs=a.split("zr");
+   var i=0;
+   var qian=document.getElementById("qian");
+   qian.textContent="";
+   function zz(){
+    if(i<qqs.length){
+	qian.textContent+=qqs[i];
+	i++;
+	}
+   }
+   setInterval(zz,1110);
+
+
+
+
+  </script>
+ </body>
+</html>
