@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>20随机数加法</title>
+  <style type="text/css">
+	body{
+		text-align:center;
+		font-size:25px;
+		background: url(https://img.zcool.cn/community/0186b2606c2de411013fb117dc9c4f.jpg@1280w_1l_2o_100sh.jpg) no-repeat;
+	}
+
+	#allDiv{
+		margin-top: 100px;
+	}
+
+	#result{
+		height:50px;
+		width:450px;
+		margin:auto;
+		padding-top:16px;
+		border:2px solid #ff3366;
+		color:#cc0000;
+		background-color: rgba(236, 236, 236, 0.7);
+	}
+	#opNum1,#opNum2{
+		text-align:center;
+		border:2px #33e0ff solid;
+		font-size:25px;
+		margin:18px;
+		background-color: rgba(236, 236, 236, 0.7);
+	}
+		
+	#answerA,#answerB,#answerC,#answerD,#nextOne{
+		background-color: rgba(236, 236, 236, 0.7);
+		text-align:center;
+		border:2px #f8ff33 solid;
+		font-size:25px;
+		margin:18px;
+		outline: none;
+	}
+	#nextOne{
+		border-color:#33ff52;
+	}
+	#answerA:hover,#answerB:hover,#answerC:hover,#answerD:hover,#nextOne:hover{
+		background-color: rgb(253, 201, 201);
+		transition: all 0.7s;
+	}
+  </style>
+ </head>
+ <body>
+ <div id="allDiv">
+  <div id="result">
+	20以内的加法
+  </div>
+  
+
+  <div id="question">
+	<input id="opNum1" type="text" readonly>
+	<span id="op">+</span>
+	<input id="opNum2" type="text" readonly>
+  </div>
+
+  <div id="answer">
+	A.<input type="button" value="0-20" id="answerA">
+  	B.<input type="button" value="0-20" id="answerB">
+	C.<input type="button" value="0-20" id="answerC">
+	D.<input type="button" value="0-20" id="answerD">
+  </div>
+
+  <div id="next">
+	<input type="button" value="开始答题" id="nextOne">
+  </div>
+</div>
+
+  <script type="text/javascript">
+  <!--
+  function x(){
+	var opNum1=parseInt(10*Math.random());
+	var opNum2=parseInt(10*Math.random());
+	var opNum1Dom=document.querySelector("input#opNum1");
+	var opNum2Dom=document.querySelector("input#opNum2");
+	var answerDoms=document.querySelectorAll("div#answer input");
+	opNum1Dom.value=opNum1;
+	opNum2Dom.value=opNum2;
+	
+	
+
+	for (var i=0;i<4 ;i++ )
+	{
+		var answer=parseInt(20*Math.random());
+		answerDoms[i].value=answer;   //随机生成一个answer
+
+		answerDoms[i].onclick=function(){
+			var answer=opNum1+opNum2;
+			var sel=parseInt(this.value);
+			if(sel===answer){
+				var a=document.getElementById("result");
+				a.textContent="正确√";
+			}else{
+				var b=document.getElementById("result");
+				b.textContent="错误×";
+			}
+		};//End answerDom[i].onclik
+	}
+
+	var i=parseInt(4*Math.random());
+	answerDoms[i].value=opNum1+opNum2;
+	
+  }
+
+	var nextone=document.querySelector("div#next input");
+	///setInterval(x,3000);
+	//nextone.onclick=function(){
+	//	window.location.reload();
+	//}; //实现页面刷新
+	nextone.onclick=x;
+
+    //
+  //-->
+  </script>
+  
+ </body>
+</html>
