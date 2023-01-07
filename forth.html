@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>
+	透明动态变换
+  </title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		box-sizing: border-box ;
+	}
+
+    body{
+		/* display:flex;
+		flex-wrap:wrap; */
+		background: url(https://img.zcool.cn/community/0186b2606c2de411013fb117dc9c4f.jpg@1280w_1l_2o_100sh.jpg) ;
+	}
+
+	div{
+	    color:white;
+	    width:130px;
+		height:130px;
+	    margin:10px;
+		padding:20px 10px 10px 19px;
+		/* padding-left: 19px;
+		padding-top:20px; */
+	    border:2px solid #fff128;
+		background-color:rgba(100,100,100,0.1);
+		transition:all 0.7s;
+		border-radius: 50%;
+		position:absolute;
+ }
+
+
+	/* div:hover{
+			border:2px solid #5881e9;
+			background-color: rgba(255,204,255, 0.2) ;
+			color:#ff3399;
+			width: 130px ;
+			height: 130px ;
+			cursor: pointer ;  
+		}	 */
+
+	</style>
+
+<body>
+	
+	<script type="text/javascript">
+      var s = "绝代有佳人，幽居在空谷。自云良家女，零落依草木。";
+  	  for (var i=0; i<100 ; i++ )
+  	{ 
+  		var divDom = document.createElement('div');
+  		divDom.textContent = s;
+
+		randDiv(divDom);
+
+		divDom.onmouseover = function(){
+		var x = Math.floor(Math.random() * window.innerWidth);
+		var y = Math.floor(Math.random() * window.innerHeight);
+		this.style.left = x + 'px';
+		this.style.top = y + 'px' ;
+		};
+
+	  
+	  document.body.appendChild(divDom);
+	
+  	}
+
+	 function randDiv(divD){
+		var x = Math.floor( Math.random() * window.innerWidth );
+		var y = Math.floor( Math.random() * window.innerHeight );
+		divD.style.left = x + 'px';
+		divD.style.top = y +'px';
+	 }
+
+  </script>
+
+
+</body>
+</html>
